@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Final Project</title>
+	<style>
+	        table {
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            border: 1px solid;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        th {
+            background-color: #1fc71f;
+        }
+		</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Final Project</h1>
+	<h3>In my wet bar I have: </h3>
+	<input type="checkbox" id="vodka" name="vodka" value="Vodka">
+	<label for="vodka">Vodka </label><br>
+	<input type="checkbox" id="tequila" name="tequila" value="Tequila">
+	<label for="tequila">Tequila </label><br>
+	<input type="checkbox" id="gin" name="gin" value="Gin">
+	<label for="gin">Gin </label><br>
+	<input type="checkbox" id="white_rum" name="white_rum" value="White Rum">
+	<label for="white_rum">White Rum </label><br>
+	<input type="checkbox" id="dry_vermouth" name="dry_vermouth" value="Dry Vermouth">
+	<label for="dry_vermouth">Dry Vermouth </label><br>
+	<input type="checkbox" id="cointreau" name="cointreau" value="Cointreau">
+	<label for="cointreau">Cointreau </label><br>
+	<input type="checkbox" id="triple_sec" name="triple_sec" value="Triple Sec">
+	<label for="triple_sec">Triple Sec </label><br>
+	<button onclick="load_data_with_fetch()">Load All Drinks</button>              <!-- event listener -->
+	<table id="drinkTable"></table>
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+  </body>
+</html>
