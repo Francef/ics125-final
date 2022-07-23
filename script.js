@@ -1,4 +1,4 @@
-let listData;
+let listData; 
 let table;
 
 /* 	Function load_data_with_fetch
@@ -25,3 +25,26 @@ function load_data_with_fetch() {
 				$(`#drinkTable`).append(table);
             });
     }
+	
+function loadDrinks(liquor) {
+	table = `<tr><th>Drink Name</th><th>Alcohol required</th><th></th><th></th><th></th><th></th><th>Recipe</th></tr>`;
+	for (i = 0; i < listData.length; i++) { 
+
+					for (j = 0; j < listData[i].alcohol.length; j++) {
+						if (listData[i].alcohol[j] == liquor) {
+						 // creates each row of the table
+						table += `<tr><td>` + listData[i].drink_name + `</td><td>`;
+						table += listData[i].alcohol[j] + `</td><td>`;
+					}
+					table += listData[i].recipe_link + `</td></tr>`;
+                }
+				document.querySelector(`#drinkTable`).innerHTML = table;
+}
+}
+
+let selectAlcohol = document.querySelector(`#selectLiquor`);
+selectAlcohol.addEventListener('change', (event) => {
+		let drink = event.target.value;
+		loadDrinks(drink);
+		console.log(drink);
+});
