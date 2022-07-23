@@ -23,20 +23,16 @@
   <body>
     <h1>Final Project</h1>
 	<h3>In my wet bar I have: </h3>
-	<input type="checkbox" id="vodka" name="vodka" value="Vodka">
-	<label for="vodka">Vodka </label><br>
-	<input type="checkbox" id="tequila" name="tequila" value="Tequila">
-	<label for="tequila">Tequila </label><br>
-	<input type="checkbox" id="gin" name="gin" value="Gin">
-	<label for="gin">Gin </label><br>
-	<input type="checkbox" id="white_rum" name="white_rum" value="White Rum">
-	<label for="white_rum">White Rum </label><br>
-	<input type="checkbox" id="dry_vermouth" name="dry_vermouth" value="Dry Vermouth">
-	<label for="dry_vermouth">Dry Vermouth </label><br>
-	<input type="checkbox" id="cointreau" name="cointreau" value="Cointreau">
-	<label for="cointreau">Cointreau </label><br>
-	<input type="checkbox" id="triple_sec" name="triple_sec" value="Triple Sec">
-	<label for="triple_sec">Triple Sec </label><br>
+	<select id="selectLiquor">Select...
+        <option value="Vodka">Vodka</option>
+        <option value="Tequila">Tequila</option>
+        <option value="Gin">Gin</option>
+		<option value="White Rum">White Rum</option>
+        <option value="Dry Vermouth">Dry Vermouth</option>
+        <option value="Cointreau">Cointreau</option>
+		<option value="Triple Sec">Triple Sec</option>
+    </select>
+
 	<button onclick="load_data_with_fetch()">Load All Drinks</button>              <!-- event listener -->
 	<table id="drinkTable"></table>
 	
