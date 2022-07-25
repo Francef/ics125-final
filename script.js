@@ -19,7 +19,7 @@ function load_data_with_fetch() {
 					for (j = 0; j < listData[i].alcohol.length; j++) {
 						table += listData[i].alcohol[j] + `</td><td>`;
 					}
-					table += listData[i].recipe_link + `</td></tr>`;
+					table += `<a href=` + listData[i].recipe_link + `</a></td></tr>`;
                 }
 
 				$(`#drinkTable`).append(table);
@@ -36,7 +36,7 @@ function loadDrinks(liquor) {
 						table += `<tr><td>` + listData[i].drink_name + `</td><td>`;
 						table += listData[i].alcohol[j] + `</td><td>`;
 					}
-					table += listData[i].recipe_link + `</td></tr>`;
+					table += `<a href=` + listData[i].recipe_link + `</a></td></tr>`;
                 }
 				document.querySelector(`#drinkTable`).innerHTML = table;
 }
